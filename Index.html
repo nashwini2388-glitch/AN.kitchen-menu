@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AN Home Kitchen Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #faf7f2;
+      color: #2b2b2b;
+      padding: 20px;
+    }
+
+    .menu-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #e0d5c1;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      padding: 30px;
+    }
+
+    /* Header & Top-Right Logo */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #8c281f;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #8c281f;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #8c281f;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    /* 5-Column Table Layout */
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .menu-table th {
+      padding: 12px 10px;
+      text-align: left;
+      border-bottom: 2px solid #d4af37;
+      vertical-align: top;
+    }
+
+    .menu-table h3 {
+      font-size: 1.25rem;
+      color: #8c281f;
+      margin: 0;
+    }
+
+    .menu-table td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-right: 1px solid #f0ebe1;
+    }
+
+    .menu-table td:last-child {
+      border-right: none;
+    }
+
+    /* Item & Price styling */
+    .menu-list {
+      list-style: none;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px dotted #ccc;
+      font-size: 0.95rem;
+    }
+
+    .item-name {
+      font-weight: 500;
+      color: #333;
+      padding-right: 8px;
+    }
+
+    .item-price {
+      font-weight: 600;
+      color: #8c281f;
+      white-space: nowrap;
+    }
+
+    /* Footer Contact */
+    .footer {
+      margin-top: 35px;
+      padding: 18px 20px;
+      background-color: #fcf8f2;
+      border-top: 2px solid #8c281f;
+      border-radius: 0 0 8px 8px;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #25d366;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+      text-decoration: none;
+    }
+
+    .call-link {
+      color: #8c281f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .call-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .logo {
+        align-self: flex-end;
+      }
+      .menu-table, .menu-table thead, .menu-table tbody, .menu-table th, .menu-table td, .menu-table tr {
+        display: block;
+      }
+      .menu-table th {
+        display: none;
+      }
+      .menu-table td {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+      }
+      .column-mobile-title {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .column-mobile-title {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-container">
+    <!-- Header with H1 and Top-Right Logo -->
+    <header class="header">
+      <h1>AN home kitchen menu</h1>
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+          <path d="M7 2v20"></path>
+          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+        </svg>
+        <span>AN Kitchen</span>
+      </div>
+    </header>
+
+    <!-- Table with 5 columns -->
+    <table class="menu-table">
+      <thead>
+        <tr>
+          <th><h3>Starters</h3></th>
+          <th><h3>Main Course</h3></th>
+          <th><h3>Sides</h3></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Column 1: Starters -->
+          <td>
+            <h3 class="column-mobile-title">Starters</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="item-name">Prawns rawa fry</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken lollipop</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken chilli</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Paneer chilli</span><span class="item-price">280</span></li>
+              <li class="menu-item"><span class="item-name">Gobi manchurian</span><span class="item-price">250</span></li>
+              <li class="menu-item"><span class="item-name">Pamplet rawa fry</span><span class="item-price">per piece</span></li>
+              <li class="menu-item"><span class="item-name">Kingfish rawa fry</span><span class="item-price">per piece</span></li>
+              <li class="menu-item"><span class="item-name">Veg sandwich</span><span class="item-price">per piece</span></li>
+              <li class="menu-item"><span class="item-name">Chicken sandwich</span><span class="item-price">per piece</span></li>
+              <li class="menu-item"><span class="item-name">Pav bhaji</span><span class="item-price">120</span></li>
+              <li class="menu-item"><span class="item-name">Misal pav</span><span class="item-price">120</span></li>
+              <li class="menu-item"><span class="item-name">Chole bhature</span><span class="item-price">120</span></li>
+              <li class="menu-item"><span class="item-name">Vada pav</span><span class="item-price">30</span></li>
+            </ul>
+          </td>
+
+          <!-- Column 2: Main Course -->
+          <td>
+            <h3 class="column-mobile-title">Main Course</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="item-name">Chicken biryani</span><span class="item-price">350</span></li>
+              <li class="menu-item"><span class="item-name">Chicken malai tikka</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken tikka masala</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken thali</span><span class="item-price">350</span></li>
+              <li class="menu-item"><span class="item-name">Fish thali</span><span class="item-price">350</span></li>
+              <li class="menu-item"><span class="item-name">Butter chicken</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken curry</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Chicken tikka</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Veg noodles</span><span class="item-price">200</span></li>
+              <li class="menu-item"><span class="item-name">Chicken noodles</span><span class="item-price">240</span></li>
+              <li class="menu-item"><span class="item-name">Mutton sukka/gravy</span><span class="item-price">300</span></li>
+              <li class="menu-item"><span class="item-name">Veg fried rice</span><span class="item-price">200</span></li>
+              <li class="menu-item"><span class="item-name">Chicken fried rice</span><span class="item-price">250</span></li>
+            </ul>
+          </td>
+
+          <!-- Column 3: Sides -->
+          <td>
+            <h3 class="column-mobile-title">Sides</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="item-name">Chapati</span><span class="item-price">20</span></li>
+              <li class="menu-item"><span class="item-name">Bhakri</span><span class="item-price">30</span></li>
+            </ul>
+          </td>
+
+          <!-- Column 4 -->
+          <td></td>
+
+          <!-- Column 5 -->
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Footer Note with Tap-to-WhatsApp & Call -->
+    <div class="footer">
+      <a class="whatsapp-btn" href="https://wa.me/919023145641?text=Hello!%20I%20would%20like%20to%20place%20an%20order%20from%20AN%20Kitchen." target="_blank" rel="noopener">
+        💬 Tap to WhatsApp
+      </a>
+      or call on : <a class="call-link" href="tel:9023145641">9023145641</a> if want anything else or want to order. Thank you.
+    </div>
+  </div>
+
+</body>
+              </html>
+              
